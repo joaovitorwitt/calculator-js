@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(42, 42, 212), rgb(194, 59, 59));
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+}
+
+.container > button {
+    border: 1px solid #ffffff;
+    /* font-size: 2rem; */
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.container > button:hover {
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.extend-two {
+    grid-column: span 2;
+}
+
+.content {
+    grid-column: 1 / -1;
+    background-color: rgb(42, 80, 42);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.content > .saved-operator {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.content > .current-operator {
+    color: white;
+    font-size: 2rem;
+}
