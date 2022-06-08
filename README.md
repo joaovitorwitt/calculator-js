@@ -1,0 +1,1 @@
+A simple calculator project that does the calculations based on the operator
